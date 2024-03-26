@@ -1,4 +1,5 @@
 {
-    "buildCommand": "npm start",
-    "outputDirectory": "./src/"
-  }
+  "buildCommand": "npm start",
+  "outputDirectory": "./src/",
+  "startCommand": "npm run exec"
+}
