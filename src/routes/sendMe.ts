@@ -8,7 +8,7 @@ import { EmailData, sendEmail } from "../controllers/sendMe";
 
 export const router = express.Router();
 
-router.post("/",corsPermissionsIsNotRequired, (req, res) => {
+router.post("/", (req, res) => {
   try {
     const emailDataOrigin = req.body as EmailData;
 
