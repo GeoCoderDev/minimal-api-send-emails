@@ -24,13 +24,16 @@ const corsOptions: CorsOptions = {
     }
   },
 };
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(method_override()); // Soporte para HTTP method override
 app.use(method_override("X-HTTP-Method-Override")); // Soporte adicional para HTTP method override
 
 // Asignando los routers a sus respectivas rutas
 app.use("/sendMe", sendRouter);
+app.get("*", (req, res) => {
+  res.send("HOLAAAAAAAAAAAAAAAAA");
+});
 
 //Iniciando servidor
 app.listen(PORT, () => {

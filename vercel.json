@@ -1,5 +1,14 @@
 {
-  "buildCommand": "npm start",
-  "outputDirectory": "./src/",
-  "start": "npm run exec"
-}
+    "builds": [
+      {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "api/index.js"
+      }
+    ]
+  }
