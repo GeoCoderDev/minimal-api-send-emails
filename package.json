@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
+    "build": "npm install",
     "dev":  "ts-node ./src/index.ts",
     "start": "ts-node ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
