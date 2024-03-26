@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.ts",
-    "start": "npm install --production --prefix node_modules ts-node && ts-node ./src/index.ts",
+    "dev":  "ts-node ./src/index.ts",
+    "start": "npm install && npm install -g ts-node && ts-node ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,7 +20,8 @@
     "express": "^4.19.1",
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
-    "resend": "^3.2.0"
+    "resend": "^3.2.0",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
