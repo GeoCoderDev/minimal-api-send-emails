@@ -7,7 +7,7 @@ export interface EmailData {
 }
 
 const RESEND_API_KEY =
-  process.env.RESENT_API_KEY;
+  process.env.RESENT_API_KEY || "re_Jmt7LiYM_3wumjHArZFA5QMQcPUhU7va1";
 
 const resend = new Resend(RESEND_API_KEY!);
 
@@ -24,7 +24,14 @@ export async function sendEmail({ fromEmail, message, nameOrigin }: EmailData) {
       to: ["juanchavezsaldana1@gmail.com"],
       subject: `Message from ${nameOrigin}`,
       text: message,
-      html: `<b>from email: ${fromEmail}</b>`,
+      html: `
+      
+        <p>${message}</p>
+        <br />
+        <br />
+        <b>from email: ${fromEmail}</b>
+      
+      `,
     });
   } catch (e) {
     throw e;

@@ -24,6 +24,7 @@ const corsOptions: CorsOptions = {
     }
   },
 };
+
 app.use(cors());
 
 app.use(method_override()); // Soporte para HTTP method override
@@ -31,8 +32,8 @@ app.use(method_override("X-HTTP-Method-Override")); // Soporte adicional para HT
 
 // Asignando los routers a sus respectivas rutas
 app.use("/sendMe", sendRouter);
-app.get("/", (req, res) => {
-  res.send("HOLAAAAAAAAAAAAAAAAA");
+app.get("/sends", (req, res) => {
+  res.send("HOLAAAAAAAAAAAAAAAAA" + new Date());
 });
 
 //Iniciando servidor
